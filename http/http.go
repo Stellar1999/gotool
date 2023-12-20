@@ -205,7 +205,7 @@ func doParseResponse(httpResponse *http.Response, err error) (int, http.Header, 
 }
 
 func mapHeader2netHeader(header map[string]string) http.Header {
-	var netHeader http.Header
+	var netHeader = make(http.Header)
 	if header != nil {
 		for k, v := range header {
 			netHeader.Set(k, v)

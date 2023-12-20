@@ -100,7 +100,7 @@ func TestGet(t *testing.T) {
 			name: "Get Simple",
 			args: args{
 				url:       "http://jsonplaceholder.typicode.com/posts",
-				header:    nil,
+				header:    map[string]string{"test": "test"},
 				parameter: nil,
 			},
 			wantRespCode: http.StatusOK,
